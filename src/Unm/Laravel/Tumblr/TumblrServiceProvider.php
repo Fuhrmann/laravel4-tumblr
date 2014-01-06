@@ -36,9 +36,14 @@ class TumblrServiceProvider extends ServiceProvider {
 	public function register()
 	{
         $this->app->bind('tumblr', function($app) {
-//            dd($app['config']->get('tumblr::config'));
             $c = new \Tumblr\API\Client($app['config']->get('tumblr::consumer_key'),$app['config']->get('tumblr::secret'));
-            $c->setToken($app['config']->get('tumblr::token'),$app['config']->get('tumblr::token_secret'));
+
+            # If they have the auth tokens, then put them in.
+            if(!empty($app['config']->get('tumblr::token')))
+            {
+                $c->setToken($app['config']->get('tumblr::token'),$app['config']->get('tumblr::token_secret'));
+            }
+
             return $c;
         });
 	}
