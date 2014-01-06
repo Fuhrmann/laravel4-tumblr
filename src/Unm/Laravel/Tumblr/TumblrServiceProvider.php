@@ -39,7 +39,7 @@ class TumblrServiceProvider extends ServiceProvider {
             $c = new \Tumblr\API\Client($app['config']->get('tumblr::consumer_key'),$app['config']->get('tumblr::secret'));
 
             # If they have the auth tokens, then put them in.
-            if(!empty($app['config']->get('tumblr::token')))
+            if( $app['config']->get('tumblr::token') == '' )
             {
                 $c->setToken($app['config']->get('tumblr::token'),$app['config']->get('tumblr::token_secret'));
             }
