@@ -1,0 +1,31 @@
+{
+    "name": "unm/laravel4-tumblr",
+    "description": "A laravel 4.1 service provider package that wraps the Tumblr PHP SDK",
+    "keywords"   : ["tumblr","php","laravel"],
+    "homepage"   : "https://github.com/undernewmanagement/laravel4-tumblr",
+    "license"    : "MIT",
+    "authors": [
+        {
+            "name"     : "Under New Management",
+            "homepage" : "http://github.com/undernewmanagement",
+            "role"     : "developer"
+        }
+    ],
+    "support" : {
+        "issues" : "https://github.com/undernewmanagement/laravel4-tumblr/issues"
+    },
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*",
+        "tumblr/tumblr" : "dev-master"
+    },
+    "autoload": {
+        "classmap": [
+            "src/controllers"
+        ],
+        "psr-0": {
+            "Unm\\Laravel\\Tumblr\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
