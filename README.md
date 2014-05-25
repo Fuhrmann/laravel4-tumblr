@@ -6,7 +6,7 @@ Disclaimer: I'm new to this, and there may be problems.
  1. Add the line to composer
  2. run `composer update`
  3. Add `\Unm\Laravel\Tumblr\TumblrServiceProvider` to your app.php file
- 4. Run `php artisan publish:config unm/laravel4-tumblr`
+ 4. Run `php artisan config:publish unm/laravel4-tumblr`
 
 ## Configuration
 Edit `app/config/packages/unm/laravel4-tumblr/config.php`. Update with your consumer key and secret. Optionally
